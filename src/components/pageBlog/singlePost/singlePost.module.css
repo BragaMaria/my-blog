@@ -1,0 +1,160 @@
+.singlePost {
+}
+
+.singlePost .wrapPost,
+.commentsAre {
+  background: #f7f7f7;
+  padding: 30px;
+  position: relative;
+}
+
+.singlePost .wrapPost {
+  margin-bottom: 50px;
+}
+
+.singlePost {
+  background: #ffffff;
+  color: #3f3f3f;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+}
+
+.singlePost:after,
+.singlePost:before {
+  clear: both;
+  content: "\0020";
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.entryHeader {
+  text-align: center;
+}
+
+.singlePost .entryHeader {
+  padding: 40px 0;
+}
+
+.singlePost .entryHeader h2.entryTitle {
+  font-family: "Cabin", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #111;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.singlePost .entryHeader h2.entryTitle a {
+  color: #111;
+  margin: 0;
+}
+
+h3.entryTitle {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.entryTitleBlog a:hover {
+  color: #628d7c;
+}
+
+.entryHeader .time {
+  font-family: "Merriweather", Georgia, serif;
+  color: #888;
+  font-size: 17px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.entryHeader .catLinks {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.postThumbnailWrap {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.postThumbnailWrap img {
+  width: 100%;
+}
+
+.entryContent {
+  padding: 40px 100px;
+  text-align: left;
+}
+
+.entryContent span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 767px) {
+  .entryContent {
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .singlePost .entryContent {
+    padding: 30px;
+  }
+}
+
+.entryContent p {
+  font-size: 16px;
+  color: #686868;
+  display: none;
+}
+
+.entryContent p:first-of-type {
+  display: inline;
+}
+
+.entryContent blockquote {
+  border-left: 3px solid #1c7791;
+  font-size: 18px;
+  margin: 0 50px;
+  font-style: italic;
+  color: #666;
+  padding-left: 20px;
+}
+
+.entryContent ol {
+  float: left;
+  text-align: justify;
+  margin: 10px 50px;
+  font-size: 16px;
+  list-style-type: circle;
+}
+
+.button {
+  background-color: #161616;
+  padding: 9px 20px;
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background-color: #333;
+}

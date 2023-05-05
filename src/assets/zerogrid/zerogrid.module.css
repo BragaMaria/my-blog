@@ -1,0 +1,265 @@
+/*
+Zerotheme.com | Free Html5 Responsive Templates
+ZeroGrid - A Single Grid System for Responsive Design
+Author: Kimmy
+Version : 3.0
+Author URI: https://www.zerotheme.com/
+*/
+/* -------------------------------------------- */
+/* ------------------Grid System--------------- */
+.zeroGrid {
+  width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.zeroGrid:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.zeroGrid .f-right {
+  float: right !important;
+}
+
+.zeroGrid .f-left {
+  float: left !important;
+}
+
+.zeroGrid .row {
+}
+
+.zeroGrid .row:before,
+.row:after {
+  content: "\0020";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.zeroGrid .row:after {
+  clear: both;
+}
+
+.zeroGrid .row {
+  zoom: 1;
+}
+
+.zeroGrid .wrapCol {
+  margin: 10px;
+}
+
+.zeroGrid .col_1_2,
+.zeroGrid .col_1_3,
+.zeroGrid .col_2_3,
+.zeroGrid .col_1_4,
+.zeroGrid .col_2_4,
+.zeroGrid .col_3_4,
+.zeroGrid .col_1_5,
+.zeroGrid .col_2_5,
+.zeroGrid .col_3_5,
+.zeroGrid .col_4_5,
+.zeroGrid .col_1_6,
+.zeroGrid .col_2_6,
+.zeroGrid .col_3_6,
+.zeroGrid .col_4_6,
+.zeroGrid .col_5_6 {
+  float: left;
+  display: inline-block;
+}
+
+.zeroGrid .col-full {
+  width: 100%;
+}
+
+.zeroGrid .col_1_2,
+.zeroGrid .col_1_2-fixed {
+  width: 50%;
+}
+
+.zeroGrid .offset_1_2 {
+  margin-left: 50%;
+}
+
+.zeroGrid .col_1_3,
+.zeroGrid .col_1_3-fixed {
+  width: 33.33%;
+}
+
+.zeroGrid .col_2_3,
+.zeroGrid .col_2_3-fixed {
+  width: 66.66%;
+}
+
+.zeroGrid .offset_1_3 {
+  margin-left: 33.33%;
+}
+
+.zeroGrid .offset_2_3 {
+  margin-left: 66.66%;
+}
+
+.zeroGrid .col_1_4,
+.zeroGrid .col_1_4-fixed {
+  width: 25%;
+}
+
+.zeroGrid .col_2_4,
+.zeroGrid .col_2_4-fixed {
+  width: 50%;
+}
+
+.zeroGrid .col_3_4,
+.zeroGrid .col_3_4-fixed {
+  width: 75%;
+}
+
+.zeroGrid .offset_1_4 {
+  margin-left: 25%;
+}
+
+.zeroGrid .offset_2_4 {
+  margin-left: 50%;
+}
+
+.zeroGrid .offset_3_4 {
+  margin-left: 75%;
+}
+
+.zeroGrid .col_1_5,
+.zeroGrid .col_1_5-fixed {
+  width: 20%;
+}
+
+.zeroGrid .col_2_5,
+.zeroGrid .col_2_5-fixed {
+  width: 40%;
+}
+
+.zeroGrid .col_3_5,
+.zeroGrid .col_3_5-fixed {
+  width: 60%;
+}
+
+.zeroGrid .col_4_5,
+.zeroGrid .col_4_5-fixed {
+  width: 80%;
+}
+
+.zeroGrid .offset_1_5 {
+  margin-left: 20%;
+}
+
+.zeroGrid .offset_2_5 {
+  margin-left: 40%;
+}
+
+.zeroGrid .offset_3_5 {
+  margin-left: 60%;
+}
+
+.zeroGrid .offset_4_5 {
+  margin-left: 80%;
+}
+
+.zeroGrid .col_1_6,
+.zeroGrid .col_1_6-fixed {
+  width: 16.66%;
+}
+
+.zeroGrid .col_2_6,
+.zeroGrid .col_2_6-fixed {
+  width: 33.33%;
+}
+
+.zeroGrid .col_3_6,
+.zeroGrid .col_3_6-fixed {
+  width: 50%;
+}
+
+.zeroGrid .col_4_6,
+.zeroGrid .col_4_6-fixed {
+  width: 66.66%;
+}
+
+.zeroGrid .col_5_6,
+.zeroGrid .col_5_6-fixed {
+  width: 83.33%;
+}
+
+.zeroGrid .offset_1_6 {
+  margin-left: 16.66%;
+}
+
+.zeroGrid .offset_2_6 {
+  margin-left: 33.33%;
+}
+
+.zeroGrid .offset_3_6 {
+  margin-left: 50%;
+}
+
+.zeroGrid .offset_4_6 {
+  margin-left: 66.66%;
+}
+
+.zeroGrid .offset_5_6 {
+  margin-left: 83.33%;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .zeroGrid {
+    width: 960px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .zeroGrid {
+    width: 768px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .zeroGrid,
+  .zeroGrid .col_1_2,
+  .zeroGrid .col_1_3,
+  .zeroGrid .col_2_3,
+  .zeroGrid .col_1_4,
+  .zeroGrid .col_2_4,
+  .zeroGrid .col_3_4,
+  .zeroGrid .col_1_5,
+  .zeroGrid .col_2_5,
+  .zeroGrid .col_3_5,
+  .zeroGrid .col_4_5,
+  .zeroGrid .col_1_6,
+  .zeroGrid .col_2_6,
+  .zeroGrid .col_3_6,
+  .zeroGrid .col_4_6,
+  .zeroGrid .col_5_6 {
+    width: 100%;
+  }
+
+  .zeroGrid .offset_1_2,
+  .zeroGrid .offset_1_3,
+  .zeroGrid .offset_2_3,
+  .zeroGrid .offset_1_4,
+  .zeroGrid .offset_2_4,
+  .zeroGrid .offset_3_4,
+  .zeroGrid .offset_1_5,
+  .zeroGrid .offset_2_5,
+  .zeroGrid .offset_3_5,
+  .zeroGrid .offset_4_5,
+  .zeroGrid .offset_1_6,
+  .zeroGrid .offset_2_6,
+  .zeroGrid .offset_3_6,
+  .zeroGrid .offset_4_6,
+  .zeroGrid .offset_5_6 {
+    margin-left: 0;
+  }
+}
