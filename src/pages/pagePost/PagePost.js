@@ -2,8 +2,12 @@ import React from "react";
 import styles from "./pagePost.module.css";
 import grid from "../../assets/zerogrid/zerogrid.module.css";
 import img2 from "../../assets/images/slide2.jpg";
+import { useParams } from "react-router";
 
 const PagePost = () => {
+  const params = useParams();
+  console.log(params);
+
   return (
     <div className={styles.wrapContent}>
       <div className={grid.row}>

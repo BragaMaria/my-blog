@@ -14,24 +14,31 @@ const PageBlog = () => {
     });
   }, []);
 
+  const replaceImg = (content) => {
+    let tagLink = "";
+    let imgLink = "";
+    if (content.includes("<img")) {
+      const startIndex = content.indexOf("<a");
+      const lastTag = content.indexOf("</a>");
+      const endIndex = lastTag + 4;
+      for (let index = startIndex; index < endIndex; index++) {
+        tagLink += content[index];
+      }
+      const element = document.createElement("div");
+      element.innerHTML = tagLink;
+
+      imgLink = element.querySelector("a").href;
+    }
+    return [tagLink, imgLink];
+  };
+
+  const getPostId = (url) => url.split("/").at(-1);
+
   return (
     <div className={styles.wrapContent}>
       <div className={grid.row}>
         {posts.map((post, index) => {
-          let tagLink = "";
-          let imgLink = "";
-          if (post.content.includes("<img")) {
-            const startIndex = post.content.indexOf("<a");
-            const lastTag = post.content.indexOf("</a>");
-            const endIndex = lastTag + 4;
-            for (let index = startIndex; index < endIndex; index++) {
-              tagLink += post.content[index];
-            }
-            const element = document.createElement("div");
-            element.innerHTML = tagLink;
-
-            imgLink = element.querySelector("a").href;
-          }
+          const [tagLink, imgLink] = replaceImg(post.content);
           const newContent = post.content.replace(tagLink, "");
 
           return (
@@ -42,6 +49,7 @@ const PageBlog = () => {
               img={imgLink}
               date={post.updated}
               author={post.author}
+              postId={getPostId(post.selfLink)}
             />
           );
         })}

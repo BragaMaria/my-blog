@@ -21,7 +21,6 @@ const FormatDate = (props) => {
   const date = props.date.split("T")[0].split("-");
   date.reverse();
   const indexMonth = Number(date[1]) - 1;
-  console.log(date, indexMonth);
   return (
     <span>
       {date[0]} {months[indexMonth]} {date[2]}
@@ -30,6 +29,8 @@ const FormatDate = (props) => {
 };
 
 const SinglePost = (props) => {
+  console.log(props.postId);
+
   return (
     <article className={`${styles.singlePost} ${grid.zeroGrid}`}>
       <div className={`${grid.row} ${styles.wrapPost}`}>
@@ -47,7 +48,7 @@ const SinglePost = (props) => {
         <div className={`${styles.entryContent} ${styles.zipContent}`}>
           <div dangerouslySetInnerHTML={{ __html: props.content }} />
           <center>
-            <NavLink className={styles.button} to="/post/1">
+            <NavLink className={styles.button} to={`/post/${props.postId}`}>
               Читать далее
             </NavLink>
           </center>
