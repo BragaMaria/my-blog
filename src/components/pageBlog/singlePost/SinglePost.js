@@ -3,27 +3,52 @@ import styles from "./singlePost.module.css";
 import grid from "../../../assets/zerogrid/zerogrid.module.css";
 import { NavLink } from "react-router-dom";
 
+const FormatDate = (props) => {
+  const months = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь",
+  ];
+  const date = props.date.split("T")[0].split("-");
+  date.reverse();
+  const indexMonth = Number(date[1]) - 1;
+  console.log(date, indexMonth);
+  return (
+    <span>
+      {date[0]} {months[indexMonth]} {date[2]}
+    </span>
+  );
+};
+
 const SinglePost = (props) => {
   return (
     <article className={`${styles.singlePost} ${grid.zeroGrid}`}>
       <div className={`${grid.row} ${styles.wrapPost}`}>
         <div className={styles.entryHeader}>
-          <span className={styles.time}>June 26, 2013 by admin</span>
+          <span className={styles.time}>
+            <FormatDate date={props.date} /> {props.author.displayName}
+          </span>
           <h2 className={styles.entryTitle}>
             <a href="#">{props.title}</a>
           </h2>
-          <span className={styles.catLinks}>
-            <a href="#">BUSINESS</a>, <a href="#">LIFESTYLE</a>
-          </span>
         </div>
         <div className={styles.postThumbnailWrap}>
           <img src={props.img} alt="Img" />
         </div>
-        <div className={styles.entryContent}>
+        <div className={`${styles.entryContent} ${styles.zipContent}`}>
           <div dangerouslySetInnerHTML={{ __html: props.content }} />
           <center>
             <NavLink className={styles.button} to="/post/1">
-              Read More
+              Читать далее
             </NavLink>
           </center>
         </div>

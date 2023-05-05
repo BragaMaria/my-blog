@@ -98,7 +98,7 @@ h3.entryTitle {
   text-align: left;
 }
 
-.entryContent span {
+.zipContent span {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -117,9 +117,7 @@ h3.entryTitle {
   }
 }
 
-.entryContent p {
-  font-size: 16px;
-  color: #686868;
+.zipContent p {
   display: none;
 }
 
